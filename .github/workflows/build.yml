@@ -13,4 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the image
-        run: ./build base
+        run: ./build base-nginx
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-linux-image
+          path: .build/
